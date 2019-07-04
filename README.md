@@ -1,15 +1,3 @@
-* キーペアを作成する 
-* 公開鍵を https://bitbucket.org/lig-admin/{repo}/admin/access-keys/ に登録する
-* 秘密鍵をリモートの~/.sshに追加し、~/.ssh/configに登録する 
-``` 
-AddKeysToAgent yes
-Host bitbucket.org
-HostName bitbucket.org
-Port 22
-TCPKeepAlive yes
-IdentitiesOnly yes
-IdentityFile ~/.ssh/id_rsa
-``` 
 * sample-config.jsonをconfig.jsonにリネームし、各種設定をする
 * npm installを実行
 * crontabに登録 例： ```*/5 * * * * cd /home/bitnami/remote-build-deploy && /home/bitnami/.nodebrew/current/bin/node /home/bitnami/remote-build-deploy/index.js``` 

@@ -4,7 +4,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/lig-admin/remote-build-deploy.git"
+    "url": "git+https://github.com/ryotamoriyama/remote-build-deploy.git"
   },
   "engines": {
     "node": ">=10.0.0"
@@ -18,5 +18,8 @@
     "fs-extra": "^7.0.1",
     "promise": "^8.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "homepage": "https://github.com/ryotamoriyama/remote-build-deploy#readme",
+  "version": "0.0.2",
+  "main": "index.js"
 }
