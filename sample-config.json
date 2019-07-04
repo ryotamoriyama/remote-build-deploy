@@ -1,0 +1,31 @@
+{
+  "name": "{project-name}",
+  "branch": "{branch}",
+  "project_path": "/home/bitnami/{repo-name}",
+  "rsync_path": "/usr/bin/rsync",
+  "update_package": [
+    {
+      "path": "package-lock.json",
+      "command": "npm ci"
+    }
+  ],
+  "build": [
+    {
+      "path_pattern": "resources\/",
+      "command": "npm run develop-remote"
+    }
+  ],
+  "rsync": [
+    {
+      "from": "wp/wp-content/themes",
+      "to": "/opt/bitnami/apps/wordpress/htdocs/wp-content",
+      "exclude": [
+      ]
+    }
+  ],
+  "slack": {
+    "enable": 1,
+    "hook_url": "https://hooks.slack.com/services/{WEBHOOK}",
+    "dry_run": 0
+  }
+}
