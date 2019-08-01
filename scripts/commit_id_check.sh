@@ -11,6 +11,10 @@ git checkout ${BRANCH}
 RECENT=$(echo $(git ls-remote origin ${BRANCH}) | sed -e "s/[ \t]\{1,\}.*\$//g")
 LOCAL=$(git rev-parse HEAD)
 
+echo ${RECENT}
+
+echo ${LOCAL}
+
 if [ ${RECENT} = ${LOCAL} ]; then
 exit 0;
 else

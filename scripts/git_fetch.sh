@@ -7,7 +7,4 @@ cd ${REPO_ROOT}
 
 git reset --hard > /dev/null 2>&1
 git checkout ${BRANCH} > /dev/null 2>&1
-git reset --hard > /dev/null 2>&1
-git fetch origin ${BRANCH} > /dev/null 2>&1
-git diff ${BRANCH} origin/${BRANCH} --name-only
-git merge origin/${BRANCH} > /dev/null 2>&1
+git pull origin ${BBRANCH} > /dev/null 2>&1
